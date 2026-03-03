@@ -28,4 +28,14 @@ router.get('/history', auth, async (req, res) => {
   res.json(rides);
 });
 
+router.post('/create', auth, async (req, res) => {
+  try {
+    const ride = await Ride.create({ rider: req.user.id, ...req.body });
+    res.json(ride);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+
 module.exports = router;

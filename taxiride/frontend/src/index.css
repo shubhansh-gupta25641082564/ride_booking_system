@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-yellow: #CAEF45;
+  --color-brand-dark: #1A1A2E;
+  --color-brand-card: #16213E;
+  --color-brand-light: #0F3460;
+}
+
+* { box-sizing: border-box; }
+body { background-color: #1A1A2E; color: white; font-family: 'Inter', sans-serif; }
